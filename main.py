@@ -3,7 +3,7 @@ from dbus.mainloop.glib import DBusGMainLoop
 import logging
 import _thread as thread
 
-from velib_python.dbusdummyservice import DbusDummyService
+from dbusdummyservice import DbusDummyService
 
 
 def main():
@@ -12,8 +12,9 @@ def main():
 
     DBusGMainLoop(set_as_default=True)
 
+    path_UpdateIndex = '/UpdateIndex'
     pvac_output = DbusDummyService(
-        servicename='com.victronenergy.grid.mymeter',
+        servicename='com.victronenergy.solarcharger.renogy',
         deviceinstance=0,
         paths={
         '/Ac/Power': {'initial': 0},

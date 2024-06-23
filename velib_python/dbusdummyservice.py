@@ -12,7 +12,6 @@ https://github.com/victronenergy/dbus_vebus_to_pvinverter/tree/master/test
 """
 from gi.repository import GLib
 import platform
-import argparse
 import logging
 import sys
 import os

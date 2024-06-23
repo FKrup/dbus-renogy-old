@@ -17,20 +17,22 @@ def main():
         servicename='com.victronenergy.solarcharger.renogy',
         deviceinstance=0,
         paths={
-        '/Ac/Power': {'initial': 0},
-        '/Ac/L1/Voltage': {'initial': 0},
-        '/Ac/L2/Voltage': {'initial': 0},
-        '/Ac/L3/Voltage': {'initial': 0},
-        '/Ac/L1/Current': {'initial': 0},
-        '/Ac/L2/Current': {'initial': 0},
-        '/Ac/L3/Current': {'initial': 0},
-        '/Ac/L1/Power': {'initial': 0},
-        '/Ac/L2/Power': {'initial': 0},
-        '/Ac/L3/Power': {'initial': 0},
-        '/Ac/Energy/Forward': {'initial': 0},
-        '/Ac/Energy/Reverse': {'initial': 0},
-        path_UpdateIndex: {'initial': 0},
-    })
+            '/Ac/Power': {'initial': 0},
+            '/Ac/L1/Voltage': {'initial': 0},
+            '/Ac/L2/Voltage': {'initial': 0},
+            '/Ac/L3/Voltage': {'initial': 0},
+            '/Ac/L1/Current': {'initial': 0},
+            '/Ac/L2/Current': {'initial': 0},
+            '/Ac/L3/Current': {'initial': 0},
+            '/Ac/L1/Power': {'initial': 0},
+            '/Ac/L2/Power': {'initial': 0},
+            '/Ac/L3/Power': {'initial': 0},
+            '/Ac/Energy/Forward': {'initial': 0},
+            '/Ac/Energy/Reverse': {'initial': 0},
+            path_UpdateIndex: {'initial': 0},
+        },
+        productname='Renogy Rover Boost 10A MPPT',
+    )
 
     logging.info('Connected to dbus, and switching over to GLib.MainLoop() (= event based)')
     mainloop = GLib.MainLoop()

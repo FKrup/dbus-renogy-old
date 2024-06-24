@@ -3,7 +3,7 @@ from dbus.mainloop.glib import DBusGMainLoop
 import logging
 import _thread as thread
 
-from dbusdummyservice import DbusDummyService
+from dbus_renogy import DbusRenogy
 
 
 def main():
@@ -12,27 +12,7 @@ def main():
 
     DBusGMainLoop(set_as_default=True)
 
-    path_UpdateIndex = '/UpdateIndex'
-    pvac_output = DbusDummyService(
-        servicename='com.victronenergy.solarcharger.renogy',
-        deviceinstance=0,
-        paths={
-            '/Ac/Power': {'initial': 0},
-            '/Ac/L1/Voltage': {'initial': 0},
-            '/Ac/L2/Voltage': {'initial': 0},
-            '/Ac/L3/Voltage': {'initial': 0},
-            '/Ac/L1/Current': {'initial': 0},
-            '/Ac/L2/Current': {'initial': 0},
-            '/Ac/L3/Current': {'initial': 0},
-            '/Ac/L1/Power': {'initial': 0},
-            '/Ac/L2/Power': {'initial': 0},
-            '/Ac/L3/Power': {'initial': 0},
-            '/Ac/Energy/Forward': {'initial': 0},
-            '/Ac/Energy/Reverse': {'initial': 0},
-            path_UpdateIndex: {'initial': 0},
-        },
-        productname='Renogy Rover Boost 10A MPPT',
-    )
+    pvac_output = DbusRenogy()
 
     logging.info('Connected to dbus, and switching over to GLib.MainLoop() (= event based)')
     mainloop = GLib.MainLoop()

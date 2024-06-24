@@ -4,16 +4,13 @@ from gi.repository import GLib
 from vedbus import VeDbusService
 
 
-class DbusRenogy(object):
+class DummyBattery(object):
     def __init__(self):
-        self._dbusservice = VeDbusService('com.victronenergy.solarcharger.renogy')
+        self._dbusservice = VeDbusService('com.victronenergy.battery.diy')
         self._paths = {
-            '/NrOfTrackers': {'initial': 1},
-            '/Pv/V': {'initial': 15.0},
-            '/Yield/Power': {'initial': 50.0},
-            '/MppOperationMode': {'initial': 2},
             '/Dc/0/Voltage': {'initial': 54.0},
             '/Dc/0/Current': {'initial': 0.926},
+            '/Dc/0/Power': {'initial': 50.0}
         }
 
         # Create the management objects, as specified in the ccgx dbus-api document
@@ -24,7 +21,7 @@ class DbusRenogy(object):
         # Create the mandatory objects
         self._dbusservice.add_path('/DeviceInstance', 0)
         self._dbusservice.add_path('/ProductId', 0)
-        self._dbusservice.add_path('/ProductName', 'Renogy Rover Boost 10A MPPT')
+        self._dbusservice.add_path('/ProductName', 'DIY Battery')
         self._dbusservice.add_path('/FirmwareVersion', 0)
         self._dbusservice.add_path('/HardwareVersion', 0)
         self._dbusservice.add_path('/Connected', 1)

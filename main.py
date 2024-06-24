@@ -4,6 +4,7 @@ import logging
 import _thread as thread
 
 from dbus_renogy import DbusRenogy
+from dummybattery import DummyBattery
 
 
 def main():
@@ -12,7 +13,8 @@ def main():
 
     DBusGMainLoop(set_as_default=True)
 
-    pvac_output = DbusRenogy()
+    DbusRenogy()
+    DummyBattery()
 
     logging.info('Connected to dbus, and switching over to GLib.MainLoop() (= event based)')
     mainloop = GLib.MainLoop()

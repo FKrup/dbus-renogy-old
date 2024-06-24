@@ -13,7 +13,7 @@ def main():
 
     DBusGMainLoop(set_as_default=True)
 
-    DbusRenogy()
+    #DbusRenogy()
     DummyBattery()
 
     logging.info('Connected to dbus, and switching over to GLib.MainLoop() (= event based)')

@@ -12,7 +12,7 @@ This application enables communication with Renogy Rover Boost MPPT solar charge
 
 The application is designed to be compatible with Renogy Rover Boost MPPT solar charge controllers.
 
-- 36V/48V Rover Boost 10A MPPT Solar Charge Controller (SKU: RCC10RVRB-US)
+- 36V/48V Rover Boost 10A MPPT Solar Charge Controller (SKU: RCC10RVRB)
 
 ## Contributing
 

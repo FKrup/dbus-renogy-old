@@ -1,6 +1,6 @@
 # dbus-renogy
 
-This application enables communication with Renogy MPPT solar charge controllers. The data is made available on D-Bus, the internal data bus used in Venus OS, allowing for integration with the Venus OS GUI.
+This application enables communication with Renogy Rover Boost MPPT solar charge controllers. The data is made available on D-Bus, the internal data bus used in Venus OS, allowing for integration with the Venus OS GUI.
 
 ## Features
 
@@ -10,17 +10,9 @@ This application enables communication with Renogy MPPT solar charge controllers
 
 ## Renogy MPPT Compatibility
 
-The application is designed to be compatible with Renogy MPPT solar charge controllers. Specific models and compatibility details should be provided here.
+The application is designed to be compatible with Renogy Rover Boost MPPT solar charge controllers.
 
-## Architecture
-
-The application consists of the following layers:
-
-- Data acquisition layer
-- Data model
-- D-Bus integration
-
-Further details on each layer and their components are outlined in the documentation.
+- 36V/48V Rover Boost 10A MPPT Solar Charge Controller (SKU: RCC10RVRB-US)
 
 ## Contributing
 
@@ -38,4 +30,4 @@ This project is licensed under the MIT License - see the `LICENSE` file for deta
 ## Acknowledgments
 
 - Victron Energy for Venus OS.
-- The maintainers of the `velib` library.
+- The maintainers of the `velib_python` library.
